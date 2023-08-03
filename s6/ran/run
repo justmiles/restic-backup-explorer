@@ -1,0 +1,5 @@
+#!/command/with-contenv sh
+
+export PATH=$HOME/.nix-profile/bin:$PATH
+
+ran -l -bind-ip 0.0.0.0 -r /mnt/restic

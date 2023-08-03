@@ -1,0 +1,13 @@
+#!/command/with-contenv sh
+
+if [ -z "$RESTIC_REPO" ]; then
+  echo "RESTIC_REPO is required"
+  exit 1
+fi
+
+export PATH=$HOME/.nix-profile/bin:$PATH
+
+mkdir -p /mnt/restic
+
+restic mount /mnt/restic --repo $RESTIC_REPO
+
