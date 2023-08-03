@@ -1,0 +1,9 @@
+#!/command/with-contenv sh
+
+export PATH=$HOME/.nix-profile/bin:$PATH
+
+filebrowser \
+  --address 0.0.0.0 \
+  --noauth \
+  --port 8080 \
+  --root /mnt/restic

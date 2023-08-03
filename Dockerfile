@@ -22,7 +22,7 @@ USER sandbox
 
 RUN sh /tmp/nix-install --no-daemon
 RUN PATH=$HOME/.nix-profile/bin:$PATH \
- && nix-env -i ran restic \
+ && nix-env -i filebrowser restic \
  && nix-env --delete-generations old \
  && nix-store --gc
 
